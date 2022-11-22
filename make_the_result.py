@@ -2,6 +2,7 @@ from typing import Dict, List, Optional
 import moviepy.editor
 import json
 from dataclasses import dataclass
+import random
 
 video = moviepy.editor.VideoFileClip("sample.mp4")
 
@@ -45,8 +46,8 @@ script_words = script.split()
 i = 0
 while i < len(script_words):
     word = script_words[i]
-    word = words_dict[word.casefold()][0]
-    start = 0 if word.previous is None else word.previous.end_sec
+    word = random.choice(words_dict[word.casefold()])
+    start = word.start_sec
     while True:
         end = word.end_sec
         if word.next is not None and i + 1 < len(script_words) and word.next.word.casefold() == script_words[i + 1].casefold():

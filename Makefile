@@ -1,4 +1,6 @@
-result.mp4: sample.mp4 script.txt recognized_words.json make_the_result.py
+result.mp4: rebuild
+
+rebuild: sample.mp4 script.txt recognized_words.json make_the_result.py
 	poetry run python make_the_result.py
 
 recognized_words.json: sample.mp3 picovoice_token.txt extract_the_words.py
