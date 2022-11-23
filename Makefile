@@ -1,4 +1,5 @@
-result.mp4: rebuild
+result.mp4: sample.mp4 script.txt recognized_words.json make_the_result.py
+	poetry run python make_the_result.py
 
 rebuild: sample.mp4 script.txt recognized_words.json make_the_result.py
 	poetry run python make_the_result.py
