@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "wordmix"
 version = "0.1.0"
-description = "(Video -> words) + script -> mixed words"
+description = "(Video -> words) + script -> mixed words. Personal utility"
 authors = ["megahomyak <g.megahomyak@gmail.com>"]
 license = "Unlicense"
 
